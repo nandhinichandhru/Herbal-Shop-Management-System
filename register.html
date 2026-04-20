@@ -1,0 +1,149 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Register</title>
+    <style>
+    body {
+        font-family: "Playfair Display", serif;
+        background: none;
+        background-size: cover;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        height: 100vh;
+        margin: 0;
+        overflow: hidden;
+        position: relative;
+    }
+
+    body::before {
+        content: "";
+        position: fixed;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        background-image: url("images/vecteezy_charming-display-of-dried-flowers-and-herbs-in-glass-jars-on_55302710.jpeg");
+        background-size: cover;
+        background-position: center;
+        background-repeat: no-repeat;
+        background-attachment: fixed;
+        z-index: -1;
+        pointer-events: none;
+    }
+
+    .container {
+        background: rgba(255, 255, 255, 0.2);
+        backdrop-filter: blur(10px);
+        padding: 35px 40px;
+        border-radius: 15px;
+        border: 2px solid rgba(0, 0, 0, 0.5);
+        box-shadow: 0 12px 30px rgba(0, 0, 0, 0.15);
+        width: 350px;
+        transition: transform 0.3s ease;
+    }
+
+    .container:hover {
+        transform: scale(1.015);
+    }
+
+    .container h2 {
+        text-align: center;
+        margin-bottom: 25px;
+        color: black;
+        font-family: "Playfair Display", serif;
+    }
+
+    input, select {
+        width: 100%;
+        padding: 12px 15px;
+        margin: 8px 0 16px;
+        border: 1px solid #ccc;
+        border-radius: 8px;
+        box-sizing: border-box;
+        font-size: 14px;
+        font-family: "Playfair Display", serif;
+        transition: border-color 0.3s;
+    }
+
+    input:focus, select:focus {
+        border-color: black;
+        outline: none;
+    }
+
+    .error {
+        color: red;
+        font-size: 13px;
+        margin-top: -12px;
+        display: block;
+    }
+
+    button[type="submit"] {
+        width: 100%;
+        background: #d3b1c2;
+        color: black;
+        border: none;
+        padding: 12px;
+        margin-top: 10px;
+        border-radius: 8px;
+        font-weight: bold;
+        font-size: 15px;
+        cursor: pointer;
+        transition: background 0.3s, transform 0.3s;
+        font-family: "Playfair Display", serif;
+    }
+
+    button[type="submit"]:hover {
+        background: #c89fb6;
+        transform: scale(1.05);
+    }
+
+    p {
+        text-align: center;
+        margin-top: 15px;
+        font-size: 14px;
+        color: black;
+    }
+
+    a {
+        color: blue;
+        text-decoration: none;
+        font-weight: 500;
+    }
+
+    a:hover {
+        text-decoration: underline;
+    }
+</style>
+
+</head>
+<body>
+    <div class="container">
+        <h2>Register</h2>
+        <form id="registerForm" action="register.php" method="POST">
+            <input type="text" id="name" name="name" placeholder="Full Name" required>
+            <span id="nameError" class="error"></span>
+
+            <input type="email" id="email" name="email" placeholder="Email" required>
+            <span id="emailError" class="error"></span>
+
+            <input type="password" id="password" name="password" placeholder="Password" required>
+            <span id="passwordError" class="error"></span>
+
+            <select id="role" name="role" required>
+                <option value="" disabled selected>Select Role</option>
+                <option value="Admin">Admin</option>
+                <option value="Employee">Employee</option>
+            </select>
+            <span id="roleError" class="error"></span>
+
+            <button type="submit">Register</button>
+            <p>Already have an account? <a href="login.html">Login</a></p>
+        </form>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>

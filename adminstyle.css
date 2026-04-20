@@ -1,0 +1,104 @@
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+  }
+  
+  .admin-container {
+    display: flex;
+    min-height: 100vh;
+  }
+  
+  .sidebar {
+    width: 250px;
+    background-color: #044d46;
+    padding: 20px;
+    color: white;
+  }
+  
+  .sidebar h2 {
+    font-size: 20px;
+    margin-bottom: 20px;
+  }
+  
+  .sidebar ul {
+    list-style: none;
+    padding: 0;
+  }
+  
+  .sidebar ul li {
+    margin-bottom: 40px;
+  }
+  
+  .sidebar ul li a {
+    color: #ecf0f1;
+    text-decoration: none;
+    font-weight: bold;
+    display: block;
+    transition: 0.3s;
+  }
+  
+  .sidebar ul li a:hover {
+    color: #1abc9c;
+  }
+  
+  .content {
+    flex-grow: 1;
+    padding: 30px;
+    background-color: #f4f4f4;
+  }
+  
+  table {
+    border-collapse: collapse;
+    width: 100%;
+    background-color: white;
+    box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+  }
+  
+  th, td {
+    padding: 12px 15px;
+    border: 1px solid #ddd;
+    text-align: left;
+  }
+  
+  th {
+    background-color: #3498db;
+    color: white;
+  }
+  
+  tr:hover {
+    background-color: #f1f1f1;
+  }/* General Button Styling */
+button {
+    padding: 6px 12px;
+    margin: 4px 4px;
+    border: none;
+    border-radius: 5px;
+    font-size: 14px;
+    font-weight: 600;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+    color: #fff;
+  }
+  
+  /* Specific Button Colors */
+  .edit-btn {
+    background-color: #3498db;
+  }
+  
+  .save-btn {
+    background-color: #2ecc71;
+  }
+  
+  .cancel-btn {
+    background-color: #95a5a6;
+  }
+  
+  .delete-btn {
+    background-color: #e74c3c;
+  }
+  
+  button:hover {
+    filter: brightness(0.9);
+  }
+  

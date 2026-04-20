@@ -1,0 +1,135 @@
+body {
+  font-family: "Playfair Display", serif; /*font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;*/
+  background: none;
+  background-size: cover;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 100vh;
+  margin: 0;
+  overflow: hidden;
+  position: relative;
+}
+
+body::before {
+  content: "";
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-image: url("images/vecteezy_charming-display-of-dried-flowers-and-herbs-in-glass-jars-on_55302710.jpeg");
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+  z-index: -1;
+  pointer-events: none;
+}
+
+.login-box {
+  background: rgba(255, 255, 255, 0.2); /* Transparent background */
+  backdrop-filter: blur(10px);
+  padding: 35px 40px;
+  border-radius: 15px;
+  border: 2px solid rgba(0, 0, 0, 0.5); /* Visible border with opacity */
+  box-shadow: 0 12px 30px rgba(0, 0, 0, 0.15);
+  width: 350px;
+  transition: transform 0.3s ease;
+}
+.login-box:hover {
+  transform: scale(1.015);
+}
+
+.login-box h2 {
+  text-align: center;
+  margin-bottom: 25px;
+  color: #2c3e50;
+  font-family: "Playfair Display", serif;
+}
+
+.login-box label {
+  font-weight: 600;
+  font-size: 16px;
+  color: black;
+  font-family: "Playfair Display", serif;
+}
+
+.login-box input {
+  width: 100%;
+  padding: 12px 15px;
+  margin: 8px 0 16px;
+  border: 1px solid #ccc;
+  border-radius: 8px;
+  box-sizing: border-box;
+  font-size: 14px;
+  transition: border-color 0.3s;
+  font-family: "Playfair Display", serif;
+}
+
+.login-box input:focus {
+  border-color: black;
+  outline: none;
+}
+
+.password-wrapper {
+  position: relative;
+}
+
+.password-wrapper input {
+  padding-right: 45px;
+}
+
+.toggle-password {
+  position: absolute;
+  top: 50%;
+  right: 12px;
+  transform: translateY(-50%);
+  cursor: pointer;
+  width: 24px;
+  height: 24px;
+  color: #555;
+}
+
+.toggle-password svg {
+  width: 100%;
+  height: 100%;
+}
+
+.login-box button {
+  width: 100%;
+  background: #d3b1c2; /* Changed button color */
+  color: black;
+  border: none;
+  padding: 12px;
+  margin-top: 10px;
+  border-radius: 8px;
+  font-weight: bold;
+  font-size: 15px;
+  cursor: pointer;
+  transition: background 0.3s, transform 0.3s;
+  font-family: "Playfair Display", serif;
+}
+
+.login-box button:hover {
+  background: #d3b1c2; /* Changed button color */
+  transform: scale(1.05); /* Slightly enlarge button on hover */
+}
+
+.login-box .links {
+  margin-top: 20px;
+  text-align: center;
+  font-size: 14px;
+}
+
+.login-box .links a {
+  color: black;
+  text-decoration: none;
+  margin: 0 5px;
+  transition: color 0.2s;
+}
+
+.login-box .links a:hover {
+  text-decoration: underline;
+  color: black;
+}

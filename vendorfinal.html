@@ -1,0 +1,177 @@
+ <!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@500;600&display=swap"
+      rel="stylesheet"
+    />
+    <title>Add Vendor</title>
+    <style>
+      /* General Body Styling */
+      body {
+        background: linear-gradient(
+          to right,
+          #a49393,
+          #eed6d3
+        ); /* Elegant gradient */
+        color: #333;
+        padding: 40px;
+        margin: 0;
+        overflow-x: hidden;
+      }
+
+      /* Heading Styling */
+      h2 {
+        text-align: center;
+        font-size: 30px;
+        color: #4c3d40; /* Dark brown text color */
+        font-weight: 600;
+        text-shadow: 1px 1px 5px rgba(0, 0, 0, 0.1);
+        margin-bottom: 30px;
+      }
+
+      /* Form Container Styling */
+      .form-container {
+        max-width: 600px;
+        margin: auto;
+        padding: 30px;
+        border-radius: 10px;
+        background-color: #ffffff; /* White background for the form */
+        box-shadow: 0 10px 20px rgba(0, 0, 0, 0.1);
+        border: 1px solid #d1c6b1; /* Subtle border for a clean look */
+        font-family: "Playfair Display", serif;
+      }
+
+      /* Input and Select Styling */
+      select,
+      input[type="number"],
+      input[type="text"],
+      input[type="email"],
+      textarea {
+        padding: 12px 15px;
+        border-radius: 6px;
+        border: 1px solid #d1c6b1; /* Light grayish border */
+        background-color: #f9f9f9;
+        color: #333;
+        font-size: 16px;
+        transition: all 0.3s ease;
+        width: 100%;
+        box-sizing: border-box;
+      }
+
+      /* Focus Input Styling */
+      select:focus,
+      input:focus {
+        border-color: #4c3d40; /* Dark brown on focus */
+        background-color: #f1f1f1; /* Light gray background on focus */
+        outline: none;
+      }
+
+      /* Button Styling */
+      button {
+        background-color: #4c3d40; /* Dark brown button */
+        color: #fff;
+        border: none;
+        padding: 14px 22px;
+        border-radius: 6px;
+        font-size: 16px;
+        cursor: pointer;
+        transition: background-color 0.3s ease, transform 0.3s ease;
+        width: 100%; /* Full-width button */
+        margin-top: 20px;
+        font-weight: 600;
+      }
+
+      button:hover {
+        background-color: #a49393; /* Light lavender on hover */
+        transform: scale(1.05);
+      }
+
+      /* Label Styling */
+      label {
+        display: block;
+        margin-bottom: 8px;
+        font-weight: 700;
+        color: #4c3d40; /* Dark brown for labels */
+      }
+
+      /* Textarea Styling */
+      textarea {
+        resize: vertical;
+        height: 100px;
+        background-color: #f9f9f9;
+      }
+
+      /* Responsive Design */
+      @media (max-width: 768px) {
+        .form-container {
+          width: 100%;
+          padding: 15px;
+        }
+
+        button {
+          width: 100%;
+        }
+      }
+    </style>
+  </head>
+  <body>
+    <div class="form-container">
+      <h2>Add New Vendor</h2>
+      <form action="vendor_save.php" method="POST">
+        <!-- Vendor Name -->
+        <div class="form-group">
+          <label for="vendorName">Vendor Name:</label>
+          <input type="text" name="vendorName" required />
+        </div>
+
+        <!-- Contact Number -->
+        <div class="form-group">
+          <label for="contactNo">Contact No:</label>
+          <input type="text" name="contactNo" required />
+        </div>
+
+        <!-- Email -->
+        <div class="form-group">
+          <label for="email">Email:</label>
+          <input type="email" name="email" required />
+        </div>
+
+        <!-- Address -->
+        <div class="form-group">
+          <label for="address">Address:</label>
+          <textarea name="address" required></textarea>
+        </div>
+
+        <!-- GST No -->
+        <div class="form-group">
+          <label for="gstNo">GST No:</label>
+          <input type="text" name="gstNo" required />
+        </div>
+
+        <!-- Shipping Method -->
+        <div class="form-group">
+          <label for="shippingMethod">Shipping Method:</label>
+          <select name="shippingMethod" required>
+            <option value="Courier">Courier</option>
+            <option value="In Person">In Person</option>
+          </select>
+        </div>
+
+        <!-- Payment Method -->
+        <div class="form-group">
+          <label for="paymentMethod">Payment Method:</label>
+          <select name="paymentMethod" required>
+            <option value="Cash on Delivery">Cash on Delivery</option>
+            <option value="Online">Online</option>
+          </select>
+        </div>
+
+        <!-- Submit Button -->
+        <button type="submit">Save Vendor</button>
+      </form>
+    </div>
+  </body>
+</html>

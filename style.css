@@ -1,0 +1,216 @@
+/* Reset */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+  }
+  
+  body {
+     background-image: url("images/vecteezy_charming-display-of-dried-flowers-and-herbs-in-glass-jars-on_55302710.jpeg");
+  background-size: cover;               /* Ensure the image covers the area */
+  background-position: center center;   /* Center the image */
+  background-attachment: fixed;         /* Fix the image in place when scrolling */
+  background-repeat: no-repeat; 
+
+    font-family: 'Segoe UI', sans-serif;
+    background-color: #f0fdf4;
+    color: #333;
+    line-height: 1.6;
+  }
+  
+  /* Navbar */
+  .navbar {
+    background-color: #ffffff;
+    border-bottom: 1px solid #ddd;
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+  }
+  
+  .container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 1rem 2rem;
+    max-width: 1200px;
+    margin: 0 auto;
+  }
+  
+  .logo {
+    color: #2e7d32;
+    font-size: 1.8rem;
+    font-weight: bold;
+  }
+  
+  .nav-links {
+    display: flex;
+    gap: 1.5rem;
+    list-style: none;
+  }
+  
+  .nav-links a {
+    text-decoration: none;
+    color: #2e7d32;
+    font-weight: 500;
+    transition: color 0.3s;
+  }
+  
+  .nav-links a:hover {
+    color: #43a047;
+  }
+  
+  .menu-icon {
+    display: none;
+    font-size: 1.5rem;
+    cursor: pointer;
+    color: #2e7d32;
+  }
+  
+  /* Hero Section */
+  .hero {  
+    height: 90vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: white;
+    text-align: center;
+    padding: 0 1rem;
+  }
+  
+  .hero-content {
+    background-color: rgba(0, 100, 0, 0.5);
+    padding: 2rem;
+    border-radius: 10px;
+  }
+  
+  .hero h2 {
+    font-size: 2.5rem;
+    margin-bottom: 1rem;
+  }
+  
+  .hero p {
+    font-size: 1.2rem;
+    margin-bottom: 1.5rem;
+  }
+  
+  .btn {
+    background-color: #66bb6a;
+    padding: 0.7rem 1.5rem;
+    color: white;
+    text-decoration: none;
+    border-radius: 5px;
+    transition: background 0.3s;
+  }
+  
+  .btn:hover {
+    background-color: #43a047;
+  }
+  
+  /* Section Styling */
+  .section {
+    padding: 4rem 2rem;
+    text-align: center;
+    background-color: #ffffff;
+    margin: 2rem auto;
+    max-width: 900px;
+    border-radius: 8px;
+    box-shadow: 0 4px 10px rgba(0,0,0,0.05);
+  }
+  
+  .section h3 {
+    font-size: 2rem;
+    margin-bottom: 1rem;
+    color: #2e7d32;
+  }
+  
+  /* Footer */
+  .footer {
+    text-align: center;
+    padding: 2rem;
+    background-color: #e8f5e9;
+    color: #4e944f;
+  }
+  
+  /* Responsive */
+  @media (max-width: 768px) {
+    .nav-links {
+      flex-direction: column;
+      display: none;
+      background-color: #ffffff;
+      position: absolute;
+      top: 70px;
+      right: 0;
+      width: 100%;
+      text-align: center;
+      padding: 1rem 0;
+    }
+  
+    .nav-links.active {
+      display: flex;
+    }
+  
+    .menu-icon {
+      display: block;
+    }
+  }
+  /* Dropdown Styles */
+.dropdown {
+    position: relative;
+  }
+  
+  .dropdown-toggle {
+    cursor: pointer;
+  }
+  
+  .dropdown-menu {
+    position: absolute;
+    top: 100%;
+    left: 0;
+    background-color: #ffffff;
+    box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+    list-style: none;
+    padding: 0.5rem 0;
+    display: none;
+    min-width: 180px;
+    z-index: 999;
+  }
+  
+  .dropdown-menu li {
+    padding: 0;
+  }
+  
+  .dropdown-menu a {
+    display: block;
+    padding: 0.75rem 1.25rem;
+    text-decoration: none;
+    color: #2e7d32;
+    font-weight: 500;
+    transition: background 0.3s;
+  }
+  
+  .dropdown-menu a:hover {
+    background-color: #e8f5e9;
+  }
+  
+  /* Show dropdown on hover (desktop) */
+  .dropdown:hover .dropdown-menu {
+    display: block;
+  }
+  
+  /* Responsive dropdown - show on toggle (mobile) */
+  @media (max-width: 768px) {
+    .dropdown-menu {
+      position: static;
+      box-shadow: none;
+      background-color: #ffffff;
+    }
+  
+    .dropdown:hover .dropdown-menu {
+      display: none; /* Prevent hover opening on mobile */
+    }
+  
+    .dropdown.active .dropdown-menu {
+      display: block;
+    }
+  }
+  

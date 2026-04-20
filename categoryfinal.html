@@ -1,0 +1,130 @@
+ <!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Add Category</title>
+        <link
+      href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@500;600&display=swap"
+      rel="stylesheet"
+    />
+    <style>
+        /* Body styling */
+        body {
+            font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif;
+            background-color: #F5F5F5;
+            margin: 0;
+            padding: 0;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+        }
+
+        /* Container styling with elegant shadow and padding */
+        .container {
+            width: 400px;
+            padding: 40px;
+            background: white;
+            border-radius: 16px;
+            box-shadow: 0 6px 12px rgba(0, 0, 0, 0.1);
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+            font-family: "Playfair Display", serif;
+        }
+
+        .container:hover {
+            transform: translateY(-8px);
+            box-shadow: 0 12px 24px rgba(0, 0, 0, 0.2);
+        }
+
+        /* Header styling with elegant font */
+        h2 {
+            font-size: 1.9em;
+            font-weight: bold;
+            color: #333;
+            margin-bottom: 20px;
+            text-align: center;
+            font-family: "Playfair Display", serif;
+        }
+
+        /* Label styling */
+        label {
+            font-size: 1.1em;
+            color: #555;
+            display: block;
+            margin-bottom: 10px;
+            text-align: left;
+            font-family: "Playfair Display", serif;
+        }
+
+        /* Input and textarea styling */
+        input, textarea {
+            width: 100%;
+            padding: 15px;
+            margin-bottom: 15px;
+            border: 1px solid #E0E0E0;
+            border-radius: 8px;
+            font-size: 1em;
+            background-color: #FAFAFA;
+            transition: border-color 0.3s ease, box-shadow 0.3s ease;
+        }
+
+        input:focus, textarea:focus {
+            border-color: #888;
+            box-shadow: 0 0 8px rgba(136, 136, 136, 0.4);
+            outline: none;
+        }
+
+        /* Textarea specific styling */
+        textarea {
+            resize: vertical;
+            min-height: 120px;
+        }
+
+        /* Button styling with smooth transition */
+        button {
+            width: 100%;
+            padding: 15px;
+            background-color: #333;
+            color: white;
+            font-size: 1.1em;
+            border: none;
+            border-radius: 30px;
+            cursor: pointer;
+            transition: background-color 0.3s ease, transform 0.3s ease;
+            font-family: "Playfair Display", serif;
+        }
+
+        button:hover {
+            background-color: #555;
+            transform: translateY(-4px);
+        }
+
+        /* Optional focus effect for the button */
+        button:focus {
+            outline: none;
+            box-shadow: 0 0 8px rgba(136, 136, 136, 0.2);
+        }
+
+        /* Form padding adjustment */
+        form {
+            padding: 0 10px;
+        }
+
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h2>Add Category</h2>
+        <form action="save_category.php" method="POST">
+            <label for="CategoryName">Category Name</label>
+            <input type="text" id="CategoryName" name="CategoryName" required>
+
+            <label for="Description">Description</label>
+            <textarea id="Description" name="Description" required></textarea>
+
+            <button type="submit">Save Category</button>
+        </form>
+    </div>
+</body>
+</html>
